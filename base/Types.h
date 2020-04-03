@@ -4,12 +4,12 @@
   * Description: 主要实现的是更为安全/高效的up_cast和down_cast
 **********************************************************************************/
 
-#ifndef ANNOTATE_MUDUO_TYPE_H
-#define ANNOTATE_MUDUO_TYPE_H
+#ifndef ANNOTATE_MUDUO_TYPES_H
+#define ANNOTATE_MUDUO_TYPES_H
 
 #include <string>
 #include <cstring>
-#include <cstdint>
+//#include <cstdint>
 #ifndef NDEBUG
 #include <cassert>
 
@@ -57,4 +57,4 @@ namespace muduo
     }
 }
 
-#endif //ANNOTATE_MUDUO_TYPE_H
+#endif //ANNOTATE_MUDUO_TYPES_H

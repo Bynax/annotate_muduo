@@ -1,0 +1,4 @@
+
+add_executable(timestamp_test Timestamp_test.cpp)
+target_link_libraries(timestamp_test annotate_muduo_base)
+add_test(NAME timestamp_test COMMAND timestamp_test)
