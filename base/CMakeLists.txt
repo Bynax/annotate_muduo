@@ -2,7 +2,7 @@
 aux_source_directory(. base_SRCS)
 
 # add_library命令 base_SRCS文件生成静态链接库，链接库的名字为第一个参数
-add_library(annotate_muduo_base ${base_SRCS} Thread.cpp Thread.h Atomic.h copyable.h noncopyable.h Mutext.h CurrentThread.cpp CurrentThread.h Exception.cpp Exception.h)
+add_library(annotate_muduo_base ${base_SRCS} Thread.cpp Thread.h Atomic.h copyable.h noncopyable.h Mutext.h CurrentThread.cpp CurrentThread.h Exception.cpp Exception.h Condition.cpp Condition.h CountDownLatch.cpp CountDownLatch.h)
 
 # target_link_libraries 指明生成annotate_muduo需要链接的链接库名字
 target_link_libraries(annotate_muduo_base pthread rt)
