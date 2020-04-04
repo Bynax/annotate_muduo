@@ -8,9 +8,10 @@
 #define ANNOTATE_MUDUO_TIMESTAMP_H
 
 #include "Types.h"
+#include "copyable.h"
 
-namespace annotate_muduo{
-    class Timestamp {
+namespace annotate_muduo {
+    class Timestamp : public annotate_muduo::copyable{
     public:
         // 无参构造函数
         Timestamp()
