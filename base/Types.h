@@ -9,13 +9,12 @@
 
 #include <string>
 #include <cstring>
-//#include <cstdint>
 #ifndef NDEBUG
 #include <cassert>
 
 #endif
 
-namespace muduo
+namespace annotate_muduo
 {
     using std::string;
 
