@@ -15,6 +15,7 @@ namespace annotate_muduo{
         // 如果不用__thread修饰表示该变量是可以被多个线程共享的
         // __thread关键字只能修饰POD（plain old data）类型
         //
+        // 因为取线程id是一个系统调用，因此尽量避免该方法，解决的问题则是加个缓存
         extern __thread int t_cachedTid;
         extern __thread char t_tidString[32];
         extern __thread int t_tidStringLength;

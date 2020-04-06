@@ -24,8 +24,9 @@ namespace annotate_muduo{
         // 可以使用function<void(int)> fp = bind(&类名::member，&对象, 参数.....)
         // 可以看作是适配器设计模式
     public:
+
         typedef std::function<void ()> ThreadFunc;
-        explicit Thread(ThreadFunc, const string& name = string());
+        explicit Thread(ThreadFunc func, const string& name = string());
         ~Thread();
 
         void start();
@@ -38,7 +39,10 @@ namespace annotate_muduo{
     private:
         void setDefaultName();
         bool started_;
+        bool joined_;
         pthread_t pthreadId_;
+        // 这里可能会疑惑为什么又有pthread_t又有pid_t两种
+        // 一般来说我们使用pid_t作为线程的id，详情可以翻阅陈硕书P89
         pid_t tid_;
         ThreadFunc func_;
         string name_;
